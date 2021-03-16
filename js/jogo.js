@@ -2,7 +2,11 @@
 let altura = 0
 let largura = 0
 
+//define o range de onde o elemento pode aparecer
+let x = document.getElementById('area').offsetWidth
+let y = document.getElementById('area').offsetHeight
 
+ 
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
@@ -19,16 +23,18 @@ function posicaoRandomica(){
     }
     
 
-    let posicaoX = Math.floor(Math.random()* largura) - 130
-    let posicaoY = Math.floor(Math.random()* altura) - 130
+    let posicaoX = Math.floor(Math.random()* x) - 130
+    let posicaoY = Math.floor(Math.random()* y) - 182
+
+    console.log(`antes da correção ${posicaoX} ${posicaoY}`)
 
     posicaoX = posicaoX < 0 ? 0 : posicaoX
     posicaoY = posicaoY < 0 ? 0 : posicaoY
 
-    posicaoX = posicaoX > 670 ? 670 : posicaoX
-    posicaoY = posicaoY > 410 ? 410 : posicaoY
+   // posicaoX = posicaoX > 670 ? 670 : posicaoX
+    //posicaoY = posicaoY > 410 ? 410 : posicaoY
 
-    console.log(posicaoX, posicaoY)
+    console.log(`depois da correçao ${posicaoX} ${posicaoY}`)
     //criar o elemento html
     let dalek = document.createElement('img')
     //variedade de daleks

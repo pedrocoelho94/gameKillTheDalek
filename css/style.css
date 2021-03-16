@@ -51,9 +51,6 @@
     }
 }
 
-
-
-
 .painel{
     box-sizing: border-box;
     position: absolute;
@@ -71,12 +68,7 @@
     justify-content: space-evenly;
 }
 
-.vidas{
-    
-}
-
 .cronometro{
-
     font-size: 20px;
     font-weight: bold;
 }
