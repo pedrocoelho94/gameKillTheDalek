@@ -1,11 +1,13 @@
 
 let altura = 0
 let largura = 0
+let vidas = 1
 
 //define o range de onde o elemento pode aparecer
 let x = document.getElementById('area').offsetWidth
 let y = document.getElementById('area').offsetHeight
 
+//let contDaleks = 0
  
 /*function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
@@ -20,6 +22,13 @@ function posicaoRandomica(){
     //remover o dalek anterior, caso exista
     if(document.getElementById('dalek')){
         document.getElementById('dalek').remove()
+
+        
+        if(vidas > 3){
+            window.location.href = 'fim_de_jogo.html'
+        } else{document.getElementById('v' + vidas).src = "assets/coracao_vazio.png"
+        vidas++
+        }
     }
     
 
@@ -44,8 +53,14 @@ function posicaoRandomica(){
     dalek.style.top = `${posicaoY}px`
     dalek.style.position = 'absolute'
     dalek.id = 'dalek'
+ 
+    dalek.onclick = function(){
+        this.remove()
+        //contDaleks += 1   
+        //console.log(cont)
+    }
+    
     //console.log(dalek.style.left, dalek.style.top)
-
     document.getElementById('area').appendChild(dalek)
     //document.body.appendChild(dalek)
 }
