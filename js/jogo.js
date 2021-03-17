@@ -7,13 +7,13 @@ let x = document.getElementById('area').offsetWidth
 let y = document.getElementById('area').offsetHeight
 
  
-function ajustaTamanhoPalcoJogo(){
+/*function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
     console.log(largura, altura)
 }
 
-ajustaTamanhoPalcoJogo()
+ajustaTamanhoPalcoJogo()*/
 
 function posicaoRandomica(){
 
@@ -44,7 +44,7 @@ function posicaoRandomica(){
     dalek.style.top = `${posicaoY}px`
     dalek.style.position = 'absolute'
     dalek.id = 'dalek'
-    console.log(dalek.style.left, dalek.style.top)
+    //console.log(dalek.style.left, dalek.style.top)
 
     document.getElementById('area').appendChild(dalek)
     //document.body.appendChild(dalek)
