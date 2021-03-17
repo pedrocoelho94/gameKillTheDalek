@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html{
+    cursor: url(../assets/sonic.png) 30 30, auto;
+}
+
 /*body{
     background-image: url(../assets/bgfull.jpg);
     background-position: center;
