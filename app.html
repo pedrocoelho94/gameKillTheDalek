@@ -18,16 +18,18 @@
             </div>
     
             <div class="cronometro">
-                Tempo Restante: 50s
+                Tempo Restante: <span id="cronometro"></span>
             </div>
         </div>
     </div>
 
     <script src="js/jogo.js"></script>
     <script>
-        setInterval(() => {
+        document.getElementById('cronometro').innerHTML = tempo 
+
+        let criaDalek = setInterval(() => {
             posicaoRandomica()
-        }, 1500);
+        }, criaDalekTempo);
     </script>
 </body>
 </html>

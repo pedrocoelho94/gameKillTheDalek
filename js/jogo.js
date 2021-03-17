@@ -1,7 +1,23 @@
-
 let altura = 0
 let largura = 0
 let vidas = 1
+let tempo = 30
+
+let criaDalekTempo = 1500
+
+let nivel = window.location.search //retorna ?dificil
+nivel = nivel.replace('?', '')
+
+if(nivel ==='normal'){
+    //1500
+    criaDalekTempo = 1250
+}else if(nivel === 'dificil'){
+    //1000
+    criaDalekTempo = 1000
+}else if(nivel ==='davros'){
+    // 500
+    criaDalekTempo = 750
+}
 
 //define o range de onde o elemento pode aparecer
 let x = document.getElementById('area').offsetWidth
@@ -16,6 +32,17 @@ let y = document.getElementById('area').offsetHeight
 }
 
 ajustaTamanhoPalcoJogo()*/
+
+let cronometro = setInterval(() => {
+    tempo -= 1
+    if (tempo < 0 ){
+        clearInterval(cronometro)
+        clearInterval(criaDalek)
+        window.location.href = 'vitoria.html'
+    }else{
+    document.getElementById('cronometro').innerHTML = tempo 
+    }
+}, 1000);
 
 function posicaoRandomica(){
 
